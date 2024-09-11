@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calulator</title>
+    <style>
+        body {
+          background-image: url('himalay2.JPG');
+        }
+        a:hover{
+            color: rgb(118, 45, 0);
+            text-decoration-line: line-through;
+            text-decoration: none;
+        }
+
+    </style>
+</head>
+<body style="background-color: rgb(56, 56, 56);color: white;font-size: 40px;border: 5px double rgb(179, 179, 179); margin-right: 400px;margin-left: 400px;">
+    
+    <center style="background-color: rgb(255, 255, 255);"><a href="https:www.google.com/" style="text-decoration: none; text-shadow: 1px 1px rgb(0, 0, 0);">  <h1 style=" border: 2px dotted rgb(255, 255, 255);" >CALCULATOR</h1></a></center>
+
+
+    <div style="margin-left: 150px;margin-top: 100px;">
+    <label for="" style="color: rgb(255, 255, 254); ">First  Number : </label>
+    <input type="number" name="firstValue" id="firstValue" style="height: 25px;margin-left: 50px;" placeholder="    Enter Number "><br><br>
+    <label for="" style="color: rgb(255, 238, 0);">Second  Number : </label>
+    <input type="number" name="secondValue" id="secondValue" style="height: 25px;margin-left: 7px" placeholder="     Enter Number "><br><br>
+    </div>
+
+    <div style="background-color: rgb(242, 240, 220);padding-left: 65px;padding-bottom: 10px; margin-left: 38px;margin-right: 38px;border-radius: 50px;">
+    <button onclick="add()" style="color: rgb(255, 234, 0);height: 40px;background-color: rgb(182, 76, 0);">Addition (+)</button>
+    <button onclick="sub()" style="height: 40px;color: antiquewhite;background-color: rgb(76, 76, 76);">Substraction (-)</button>
+    <button onclick="mult()" style="color: rgb(255, 255, 0);height: 40px;background-color: rgb(94, 0, 86);">Multiplication (*)</button>
+    <button onclick="div()" style="color: white;height: 40px;background-color: rgb(0, 27, 134);">Division (/)</button>
+    <button onclick="mod()" style="color: rgb(0, 0, 0);height: 40px;background-color: rgb(0, 173, 170);">Modulus (%)</button></div>
+    
+    
+    <br><br>
+    <pre id="result" style="color: crimson;background-color: rgb(255, 255, 255); margin-left: 100px;margin-right: 100px;padding-left: 35px;"></pre>
+    <marquee behavior="scroll" direction="left"> <pre style="font-size: 45px; border: 2px dotted white;margin-right: 400px; padding-left: 35px;color: chartreuse;margin-left: 80px;">Result</pre> </marquee>
+    
+    
+
+    <script type="text/javascript" src="caclulatorr.js">
+       
+
+
+    </script>
+    
+
+
+</body>
+
+</html>
