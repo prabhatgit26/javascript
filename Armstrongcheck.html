@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function armstrong(){
+            var n1,n2,rem,result=0;
+            n1=parseInt(document.getElementById("tb1").value);
+            n2=n1;
+                rem=n2%10;
+                n2=parseInt(n2/10);
+                result=result+rem*rem*rem;
+            
+
+            if(result==n1){
+                document.getElementById("tb4").value=("Number is armstrong number.")
+            }
+            if(result!=n1){
+                document.getElementById("tb4").value=("Number is not armstrong number.")
+            }
+        }
+    </script>
+</head>
+<body>
+  <center>
+    <h1>armstrong number check</h1>
+    <table border="1" style="height: 200px; width: 400px; padding: 20px;">
+        <tr>
+            <td>Enter a Number <input type="text" id="tb1"/></td>
+        </tr>
+        <tr>
+            <td>
+                <center>
+                    <button type="submit" onclick="armstrong()">check</button>
+                </center>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Result <input type="text" id="tb4" style="width: 250px;"/>
+            </td>
+        </tr>
+    </table>
+  </center>
+</body>
+</html>

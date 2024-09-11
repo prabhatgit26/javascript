@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX_Cycle</title>
+
+</head>
+<body>
+    <center>
+        <p style=" margin-top: 44px; background-color: rgb(81, 81, 81); padding: 5px; width: 600px; color: white;">Generating an AJAX Code to take Response from URL and display output on webpage</p>
+    </center>
+    <div id="demo" style="text-align: center; margin-top: 10px;">
+
+        <h1 style="font-size: 85px; color: rgb(3, 135, 192); text-shadow: 1px 1px black;">Load Data</h1>
+
+        <button type="button" onclick="loadDoc()" style="font-size: 30px; padding: 10px; background-color: rgb(150, 180, 181);">Change Content</button>
+    </div>
+
+    <script>
+        function loadDoc()
+        {
+            //creating XMLHttpRequest object
+            var xhttp=new XMLHttpRequest(); 
+
+            //Making Connection    
+            xhttp.open("GET", 'https://jsonplaceholder.typicode.com/todos/1', true)
+
+            //function execute after request is successful
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4 && xhttp.status==200)
+                {
+                    document.getElementById("demo").innerHTML=this.responseText;
+                    console.log(this.responseText);
+                    console.log("Hello");
+                    alert("Hello Dear, Your Request is ready & Press Ok to Display ");
+                    
+                }
+            }
+            
+            xhttp.send();    
+        }
+    </script>
+</body>
+</html> 

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Number</title>
+
+    <script>
+        function primenumber()
+        {
+            var n1,i, count=0;
+            n1=document.getElementById("tb1");
+
+            for(i=1; i<=n1; i++)
+            {
+                if(n1%i==0)
+                {
+                    count++;
+                }
+            }
+            if(count==2)
+            {
+                document.write("prime number");
+            }
+            else{
+                document.write("not prime numver");
+            }
+
+
+        }
+    </script>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                enter number <input type="text" id="tb1">
+            </td>
+        </tr>
+        <tr>
+           
+        </tr>
+    </table>
+    <button type="submit" onclick="primenumber()">check</button>
+</body>
+</html>

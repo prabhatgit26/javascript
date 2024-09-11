@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>checkbox alert</title>
+    <style>
+        #body{
+            cursor:pointer;
+        }
+        #checkorder1:hover{
+            color: rgb(176, 0, 0) !important;
+        }
+        #chocolateicecreame1:hover{
+            color: rgb(255, 85, 0) !important;
+        }
+        #vanillaicecreame1:hover{
+            color: rgb(245, 255, 166) !important;
+        }
+        #checkorder:hover{
+            background-color: rgb(255, 242, 60) !important;
+            border: 2px double rgb(122, 27, 27) !important;
+            border-radius: 2px  !important;
+        }
+        
+    </style>
+</head>
+<body id="body" style="background-color: black;">
+    
+    <center>
+        <p style="width: 850px; font-size: 21px; color: rgb(197, 197, 197); border: 1px double gray; padding: 15px;">
+            Have a form with two check boxes: "Chocolate" and "Vanilla" and a
+            "Check order" button. Have the button open an alert box that states either
+            "You like chocolate", "You like Vanilla", "You like both chocolate and
+            vanilla", or "PICK ONE!" if neither was checked. Uncheck all boxes after any
+            of the alerts are cleared.
+        </p>
+        <div id="checkboxicecream" style="text-align: center; border: 5px double rgb(120, 120, 120); height: 400px; width: 650px; margin-top: 100px;">
+            <h1 style="color: rgb(255, 255, 255); font-size: 50px;">What Do You Like?</h1>
+            <pre style="color: rgb(255, 210, 173); font-size: 25px;">Select Your Favourite Icecream</pre>
+            <br><br>
+
+
+            <input type="checkbox" value="chocolate" name="icecream" id="chocolateicecreame" style="color: brown; margin-right: 10px;">
+            <label for="chocolateicecreame" style="color: rgb(130, 39, 0); font-size: 25px;">CHOCOLATE</label>
+
+            <!-- <b id="chocolateicecreame1" style="color: rgb(130, 39, 0); font-size: 25px;">CHOCOLATE</b> -->
+
+
+            <input type="checkbox" value="vanilla" name="icecream" id="vanillaicecreame" style="margin-left: 80px; margin-right: 10px;" >
+            <label for="vanillaicecreame" style="color: rgb(180, 138, 0); font-size: 25px;">VANILLA</label>
+
+            <!-- <b id="vanillaicecreame1" style="color: rgb(180, 138, 0); font-size: 25px;">VANILLA</b> -->
+
+
+            <br><br><br><br>
+            <button id="checkorder" style="background-color: rgb(167, 167, 0); width: 140px; height: 35px; border: 3px double rgb(255, 255, 255);" type="submit" onclick="order()"><b id="checkorder1" style="font-size: 20px; color: rgba(0, 0, 0, 0.724);">Order Now</b></button>
+
+
+        </div>
+    </center>
+
+    <script>
+        function order()
+        {
+            var chocolate=document.querySelector("#chocolateicecreame");
+            var vanilla=document.querySelector("#vanillaicecreame");
+
+            if(chocolate.checked && vanilla.checked)
+            {
+                console.log("You Select both Chocolate and Vanilla Icecreame.");
+                
+                alert("You Select both Chocolate and Vanilla Icecreame.");
+            }
+
+            else  if(chocolate.checked)
+            {
+                alert("You Select Chocolate Icecreame.");
+            }
+           
+            else if(vanilla.checked)
+            {
+                alert("You Select Vanilla Icecreame.");
+            }
+           
+            else
+            {
+                alert("Please select / PICK ONE! any of them You Like.");
+            }
+        }
+    </script>
+     
+</body>
+</html>

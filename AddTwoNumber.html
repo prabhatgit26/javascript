@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add two numbwr</title>
+
+    <script>
+        function add()
+        {
+            var a,b,c;
+            a=parseInt(document.getElementById("tb1").value);
+            b=parseInt(document.getElementById("tb2").value);
+            c=a+b;
+            c=document.getElementById("tb3").value=c;
+        }
+    </script>
+</head>
+<body>
+    <h1>Addition of two numbers</h1>
+    <table border="2">
+        <tr>
+            <td>enter value of a
+                <input type="text" id="tb1"/>
+            </td>
+        </tr>
+        <tr>
+            <td>enter value of b
+                <input type="text" id="tb2"/>
+            </td>
+        </tr>
+        <tr>
+           
+            <td style="text-align: center;">
+                <button type="submit" onclick="add()">add</button>
+            </td>
+        </tr>
+        <tr>
+            <td>addition
+                <input type="text" id="tb3"/>
+            </td>
+        </tr>
+    </table>
+
+</body>
+</html>

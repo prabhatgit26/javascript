@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>reverse number</title>
+    <script>
+        function reverseNumber(){
+            var num, reverse=0, remainder;
+            num=parseInt(document.getElementById("num").value);
+
+            while(num!=0){
+                remainder=parseInt(num%10);
+                reverse=reverse*10+remainder;
+                num=parseInt(num/10);
+            }
+            document.getElementById("revnum").value=reverse;
+        }
+    </script>
+</head>
+<body>
+    
+    <center>
+        
+        <div style="border: 2px grey; background-color: rgb(19, 143, 197); width: 400px; padding: 50px; margin-top: 100px;">
+            <h3 style="color: rgb(124, 249, 0);">Reverse Three Digit Number</h3>
+            <br><br>
+            <table>
+                <tr>
+                    <td>Enter a three digit Number</td>
+                    <td><input type="text" id="num"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" onclick="reverseNumber()" style="background-color: chocolate; color: rgb(25, 0, 190);">Reverse Number</button></td>
+                </tr>
+                <tr>
+                    <td>Reversed Number</td>
+                    <td><input type="text" id="revnum"/></td>
+                </tr>
+            </table>
+    
+        </div>
+    </center>
+  
+</body>
+</html>

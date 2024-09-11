@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AJAX_Cycle</title>
+
+</head>
+<body>
+    <div id="demo" style="text-align: center; margin-top: 100px;">
+
+        <h1 style="font-size: 125px; color: rgb(3, 135, 192); text-shadow: 1px 1px black;">Load Data</h1>
+
+        <button type="button" onclick="loadDoc()" style="font-size: 50px; padding: 10px; background-color: rgb(150, 180, 181);">Change Content</button>
+    </div>
+
+    <script>
+        function loadDoc()
+        {
+            //creating XMLHttpRequest object
+            var xhttp=new XMLHttpRequest(); 
+
+            //Making Connection    
+            xhttp.open("GET", 'https://www.mockaroo.com/', true)
+
+            //function execute after request is successful
+            xhttp.onreadystatechange=function()
+            {
+                if(this.readyState==4 && xhttp.status==200)
+                {
+                    document.getElementById("demo").innerHTML=this.responseText;
+                    console.log(this.responseText);
+                    console.log("Hello");
+                    alert("hello");
+                    
+                }
+            }
+            
+            xhttp.send();    
+        }
+    </script>
+</body>
+</html>

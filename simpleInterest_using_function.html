@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleInterest</title>
+</head>
+    <script>
+        function simpleInterest(p,r,t){
+            var si=(p*r*t)/100;
+            return(si);
+        }
+
+        function mainFun(){
+            var p,r,t,simInt;
+
+            p=parseInt(document.getElementById("p").value);
+            r=parseInt(document.getElementById("r").value);
+            t=parseInt(document.getElementById("t").value);
+
+            simInt=simpleInterest(p,r,t);
+
+            document.getElementById("simpInt").value=simpInt;
+        }
+    </script>
+<body>
+    <table>
+        <tr>
+            <td>Enter Principal Amount : </td>
+            <td><input type="text"  id="p"/></td>
+        </tr>
+        <tr>
+            <td>Enter Rate of interest : </td>
+            <td><input type="text"  id="r"/></td>
+        </tr>
+        <tr>
+            <td>Enter Time/Tenure : </td>
+            <td><input type="text"  id="t"/></td>
+        </tr>
+
+        <tr>
+            <td></td>
+            <td><button type="submit" onclick="simpleInterest()">Calculate SI</button></td>
+        </tr>
+        <tr>
+            <td>Simple Interest =</td>
+            <td><input type="text" id="simpInt"/></td>
+        </tr>
+    </table>
+</body>
+</html>

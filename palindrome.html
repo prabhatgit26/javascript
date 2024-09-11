@@ -1,0 +1,77 @@
+<!-- using only if condition  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Three Digit Palindrome_number</title>
+    <style>
+
+        input{
+            padding: 2px;
+        }
+        td{
+            padding: 5px;
+        }
+
+    </style>
+
+    <script>
+        function palindrome()
+        {
+            let n1,a,b,c,d;
+            n1=parseInt(document.getElementById("tb1").value);
+            n2=n1;
+
+            a=parseInt((n1/100)%10);
+            b=parseInt((n1/10)%10);
+            c=parseInt((n1/1)%10);
+            
+            if(n1 !=0)
+            {
+                d=c*100+b*10+a*1;
+            }
+
+            if(n1 ==d)
+            {
+                document.getElementById("tb4").value=("Number is Palindrome.");  
+            }        
+        
+            if(n1!=d)
+            {
+                document.getElementById("tb4").value=("Number is not Palindrome.");
+            }
+
+        }
+    </script>
+</head>
+<body style="background-color: aliceblue; margin: 30px;">
+    <center>
+        <h1 style="color: rgb(87, 0, 62);background-color: rgb(231, 150, 150);">To Check Three digit Palindrome Number </h1>
+
+    <table border="2">
+        <tr>
+            <td>Enter any three digit Number</td>
+            <td>
+                <input type="number" id="tb1">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" onclick="palindrome()" style="background-color: aquamarine;">check</button>
+            </td>
+        </tr>
+        <tr>
+            
+            <td>Result</td>
+            <td>
+                <input type="text" id="tb4" style="padding: 10px;">
+            </td>
+        </tr>
+       
+    </table>
+    </center>
+</body>
+</html>

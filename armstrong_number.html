@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>armstrong_number</title>
+    <style>
+
+        input{
+            padding: 2px;
+        }
+        td{
+            padding: 5px;
+        }
+
+    </style>
+
+    <script>
+        function armstrong()
+        {
+            let num1,num2,rem,result=0;
+            num1=parseInt(document.getElementById("tb1").value);
+            num2=num1;
+
+            while(num2 !=0)
+            {
+                rem=num2%10;
+                result=result+rem*rem*rem;
+                num2=parseInt(num2/10);
+            }
+            
+            if(result==num1)
+            {
+                document.getElementById("tb4").value=("Number is Armstrong.") ;  
+            }        
+    
+            else
+            {
+                document.getElementById("tb4").value=("Number is not Armstrong.");
+            }
+        }
+    </script>
+</head>
+<body style="background-color: aliceblue; margin: 60px;">
+    <h1 style="color: rgb(189, 0, 0);background-color: rgb(255, 255, 255);">To Check Three Digit Armstrong Number</h1>
+    <table border="2">
+        <tr>
+            <td>Enter any three digit Number</td>
+            <td>
+                <input type="number" id="tb1">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" onclick="armstrong()" style="background-color: aquamarine;">check</button>
+            </td>
+        </tr>
+        <tr>
+            
+            <td>Result</td>
+            <td>
+                <input type="text" id="tb4" style="padding: 10px;">
+            </td>
+        </tr>
+       
+    </table>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Closure | Lexical scope </title>
+</head>
+<body>
+    <script>
+        
+        
+        function test(){
+            let data1 = 100;
+            console.log("inside test function : ");
+            function innerfunc(){
+                console.log("Data logged inside inner function : "+ data1);
+            }
+            innerfunc();
+        }
+        test();
+
+        
+
+    </script>
+</body>
+</html>

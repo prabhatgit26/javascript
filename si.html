@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>simpleInterest</title>
+</head>
+    <script>
+        function simpleInterest(p,r,t){
+            var si=(p*r*t)/100;
+            return(si);
+           
+        }
+
+        function mainFun(){
+
+            var p,r,t;
+            
+            p=parseInt(document.getElementById("p").value);
+            r=parseInt(document.getElementById("r").value);
+            t=parseInt(document.getElementById("t").value);
+            console.log(simpleInterest);
+
+            var simInt=simpleInterest(p,r,t);
+            document.getElementById("si").value=simInt;
+        }
+    </script>
+<body>
+    <center><h2 style="color: brown;">Calculate Simple Interest <pre style="font-size: 10px;">(with arguement with return value)</pre></h2></center>
+    <div style="background-color: bisque; padding: 10px;">
+
+        <center>
+
+            <table>
+                <tr>
+                    <td>Enter Principal Amount</td>
+                    <td><input type="text" id="p"/></td>
+                </tr>
+                <tr>
+                    <td>Enter Rate of Interest</td>
+                    <td><input type="text" id="r"/></td>
+                </tr>
+                <tr>
+                    <td>Enter Time(in year)</td>
+                    <td><input type="text" id="t"/></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><button type="submit" onclick="mainFun()" style="color: white; background-color: blue; border-radius: 1px rgb(215, 215, 215);">Calculate SI</button></td>
+                </tr>
+                <tr>
+                    <td>Simple_Interest ==> </td>
+                    <td><input type="text" id="si"/></td>
+                </tr>
+                
+            </table>
+           </center>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ThreeImageText || Image Click</title>
+    <style>
+        ::selection{
+            color: rgb(255, 255, 255);
+            background-color: rgb(255, 102, 0);
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div style="margin-top: 50px;">
+            
+            <p style="width: 850px; font-size: 25px; border: 1px double gray; padding: 15px;">
+                Display 3 images and a single form text area on the page.<br> Have 3 different
+                words display in the text area, depending on which image you click.<br>Put the focus in the text area when the page has loaded.
+            </p>
+            <h1>Demonstration of Onclick Images and Discription about that Image.</h1><br><br>
+            
+            <img src="images/kedarnath.jpg" alt="kedarnath" id="image1" style="height: 450px; width: 350px; padding: 10px; border: 2px double rgb(185, 185, 185);">
+            <img src="images/golden.jpg" alt="goldentemple" id="image2" style="height: 450px; width: 350px; padding: 10px; border: 2px double rgb(185, 185, 185);">
+            <img src="images/jammu.jpg" alt="jammu" id="image3" style="height: 450px; width: 350px; padding: 10px; border: 2px double rgb(185, 185, 185);">
+        </div>
+    </center>
+    <center>
+        <div style="margin-top: 50px;">
+            <h3>Here You know About...</h3>
+            <textarea name="" id="text" cols="50" rows="5" style="padding: 20px;"></textarea>
+        </div>
+    </center>
+
+    <script>
+        var textarea=document.getElementById("text");
+        var image1=document.getElementById("image1");
+        var image2=document.getElementById("image2");
+        var image3=document.getElementById("image3");
+
+        image1.onclick=function()
+        {
+            textarea.value="You click on the image of SHRI KEDARNATH DHAAM TEMPLE. Kedarnath is a Hindu shrine located in the Indian state of Uttarakhand, and it has a rich history and mythology associated with it."
+        }
+        image2.onclick=function()
+        {
+            textarea.value="You click on the image of HOLY GOLDEN TEMPLE of Amritsar. The Golden temple is famous for its full golden dome, it is one of the most sacred pilgrim spots for Sikhs."
+        }
+        image3.onclick=function()
+        {
+            textarea.value="You click on the image of Jammu & Kashmir's Pride Dal Lake. Dal is a lake in Srinagar, the summer capital of the Indian-administered Jammu and Kashmir in the disputed Kashmir region."
+        }
+        textarea.focus();
+    </script>
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>middlenumber</title>
+    <style>
+
+        input{
+            padding: 2px;
+        }
+        td{
+            padding: 5px;
+        }
+
+    </style>
+
+    <script>
+        function middlenumber()
+        {
+            let a,b,c;
+            a=parseInt(document.getElementById("tb1").value);
+            b=parseInt(document.getElementById("tb2").value);
+            c=parseInt(document.getElementById("tb3").value);
+
+            if((a>b && a<c) || (a<b && a>c))
+            {
+                document.getElementById("tb4").value=a;
+            }
+            if((b>a && b<c) || (b<a && b>c))
+            {
+                document.getElementById("tb4").value=b;
+            }
+            if(c>a && c<b) || (c<a && c>b)
+            {
+                document.getElementById("tb4").value=c;
+            }    
+        }
+    </script>
+</head>
+<body background="pexels-infinityexped-10728319.jpg" style="background-color: rgb(136, 163, 176); margin: 190px;">
+    <h1 style="color: rgb(0, 161, 97);background-color: rgb(255, 255, 255);">To Check Middle Number Among Three </h1>
+
+    <table border="2" style="padding: 5px; border: 3px double rgb(255, 255, 255);">
+        <tr>
+            <td><pre>Enter value of : a</pre></td>
+            <td>
+                <input type="number" id="tb1">
+            </td>
+        </tr>
+        <tr>
+            <td><pre>Enter value of : b</pre></td>
+            <td>
+                <input type="number" id="tb2">
+            </td>
+        </tr>
+        <tr>
+            <td><pre>Enter value of : c</pre></td>
+            <td>
+                <input type="number" id="tb3">
+            </td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>
+                <button type="submit" onclick="middlenumber()" style="background-color: rgb(181, 33, 0);color: wheat;">Check Middle Number</button>
+            </td>
+        </tr>
+        <tr>
+            
+            <td><center style="background-color: rgb(10, 94, 45); color: rgb(255, 255, 255);margin: 20px;">Result</center></td>
+            <td>
+                <input type="text" id="tb4" style="padding: 10px;">
+            </td>
+        </tr>
+       
+    </table>
+</body>
+</html>

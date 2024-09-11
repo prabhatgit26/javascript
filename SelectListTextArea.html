@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List Of Flavour || Text Area</title>
+</head>
+<body style="background-color: rgb(112, 73, 0);">
+   <center>
+    <p style="width: 850px; font-size: 21px; color: rgb(255, 255, 255); border: 1px double gray; padding: 15px;">
+        Have a select list of ice cream flavors and a textbox. When you select a
+        flavor, the textbox should display: "You picked [flavor chosen]."
+    </p>
+    <div style="margin-top: 100px; border: 3px double rgb(255, 232, 199); width: 900px; padding: 20px;">
+        <h1 style="font-size: 55px; color: rgb(204, 255, 0);">What Would You Have in Your Bucket?</h1>
+        <select name="" id="flavour" style="width: 200px; height: 25px;">
+            <option value="select">Select Your Flavour</option>
+            <option id="flavour" value="Chocolate Flavour">Chocolate</option>
+            <option id="flavour" value="Mango Flavour">Mango</option>
+            <option id="flavour" value="Vanilla Flavour">Vanilla</option>
+            <option id="flavour" value="Orange Flavour">Orange</option>
+        </select><br><br>
+    
+        <p>
+            <input type="text" id="text" style="padding: 20px;width: 190px; border: 4px double rgb(88, 21, 0);">
+        </p>
+    
+        <script>
+            var flavourName=document.getElementById("flavour");
+            var showBox=document.getElementById("text");
+            flavourName.onclick=function()
+            {
+                var flavour=flavourName.value;
+                showBox.value="You Select " +flavour;
+            }
+        </script>
+    </div>
+   </center>
+</body>
+</html>

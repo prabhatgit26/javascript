@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #button:hover{
+            color: rgb(0, 4, 255);
+        }
+    </style>
+
+    <script>
+        function prime()
+        {
+            var a=[1,5,8,4,6,9,7,4,1,2,3,66,44,12,11,23,29,31,41,43,47,93,101];
+            var i,j,count;
+            document.write("<br>Elements in Array ==> ");
+            document.write(a);
+            document.write("<br><br> Prime Numbers are ==> ");
+
+            for(i=0; i<100; i++)
+            {
+                count=0;
+                for(j=1; j<=a[i]; j++)
+                {
+                    if(a[i]%j==0)
+                    {
+                        count++;
+                    }
+                }
+                if(count==2)
+                {
+                    document.write(a[i]+ ",");
+                }   
+             
+            }
+            
+        }
+    </script>
+</head>
+<body>
+   <center>
+    <button id="button" type="submit" onclick="prime()" style="background-color: rgb(233, 206, 0); border-radius: 10px; padding: 5px; border: 1px solid rgb(145, 3, 3);">PrimeNumbers</button>
+   </center>
+</body>
+</html>
